@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Route, Router, Switch } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import "./App.scss";
+import Header from "./components/Header";
+import routes from "./routes";
+export const browserHistory = createBrowserHistory();
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router history={browserHistory}>
+        <Header />
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            {Object.keys(routes).map((key) => (
+              //@ts-ignore
+              <Route key={routes[key].path} {...routes[key]} />
+            ))}
+          </Switch>
+        </React.Suspense>
+      </Router>
     </div>
   );
 }
