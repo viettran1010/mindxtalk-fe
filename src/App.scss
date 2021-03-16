@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+:root {
+  --background-primary: #ffffff;
+  --text-primary: #07285e;
+}
+[data-theme ="dark"] {
+  --background-primary: #07285e;
+  --text-primary: #ffffff;
+}
