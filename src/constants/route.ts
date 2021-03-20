@@ -1,5 +1,6 @@
-const ROUTE_LOGIN = "/login";
+const ROUTE_LOGIN = '/login';
 
-export default {
+const routeConstants = {
   ROUTE_LOGIN,
 };
+export default routeConstants;

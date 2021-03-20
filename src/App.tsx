@@ -1,9 +1,9 @@
-import React from "react";
-import { Route, Router, Switch } from "react-router-dom";
-import { createBrowserHistory } from "history";
-import "./App.scss";
-import Header from "./components/Header";
-import routes from "./routes";
+import React from 'react';
+import { Route, Router, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import './App.scss';
+import Header from './components/Header';
+import routes from './routes';
 export const browserHistory = createBrowserHistory();
 function App() {
   return (
