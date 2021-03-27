@@ -47,7 +47,7 @@ const Header = () => {
         <Menu mode="horizontal" className={cx('menu')}>
           <Menu.Item
             className={cx('menu-item')}
-            onClick={() => browserHistory.push('/')}
+            onClick={() => browserHistory.push(routeConstants.HOME_PAGE)}
           >
             HOME
           </Menu.Item>
