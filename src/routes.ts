@@ -7,8 +7,16 @@ const ReactLazyPreload = (importStatement: any) => {
 };
 const Homepage = ReactLazyPreload(() => import('../src/containers/Homepage'));
 const LoginPage = ReactLazyPreload(() => import('../src/containers/Login'));
+const LandingPage = ReactLazyPreload(
+  () => import('../src/containers/LandingPage'),
+);
 const routes = {
-  home: { path: '/', exact: true, component: Homepage },
+  landing: {
+    path: '/',
+    exact: true,
+    component: LandingPage,
+  },
+  home: { path: routeConstants.HOME_PAGE, exact: true, component: Homepage },
   login: {
     path: routeConstants.ROUTE_LOGIN,
     exact: true,
