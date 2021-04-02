@@ -4,6 +4,7 @@ import { Button, Input } from 'antd';
 import { useState } from 'react';
 import { loginService } from '../../services';
 import { browserHistory } from '../../App';
+import { routeConstants } from '../../constants';
 const cx = classnames.bind(styles);
 const Login = () => {
   const [username, setUserName] = useState<string>('');
@@ -12,9 +13,8 @@ const Login = () => {
   const onLogin = async () => {
     if (username && password) {
       const res = await loginService.login(username, password);
-      console.log(res);
       if (res && res.access_token) {
-        browserHistory.push('/');
+        browserHistory.push(routeConstants.HOME_PAGE);
       }
     }
   };

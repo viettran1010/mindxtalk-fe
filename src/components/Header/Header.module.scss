@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--background-primary);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 
   .menu {
     background-color: var(--background-primary);

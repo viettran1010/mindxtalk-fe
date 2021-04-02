@@ -43,6 +43,7 @@
   --background-primary: #ffffff;
   --text-primary: #07285e;
   --button-primary-background: #6699ff;
+  --button-primary-bg-hover: rgba(102, 153, 255, 0.7);
   --button-text-primary: #fff;
 }
 [data-theme ="dark"] {
@@ -50,6 +51,6 @@
   --text-primary: #ffffff;
   --button-primary-background: #07285e;
   --button-text-primary: #fff;
-
+  --button-primary-bg-hover: rgba(7, 40, 94, 0.7);
 
 }
